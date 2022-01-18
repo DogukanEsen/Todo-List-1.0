@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kayıt</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <h1 style="color: rgb(17, 15, 105);">KAYIT OL!</h1>
+    <br><br><br><br><br><br><br><br><br><br>
+    <div class="main">
+
+      <% if (messages) { %>
+      <p><%= messages.error %></p>
+      <% } %>
+      <form action="/register" method="post">
+        <input type="text" name="name" placeholder="İsim" />
+        <input
+          type="email"
+          name="email"
+          placeholder="Örnek@gmail.com"
+        />
+        <input type="password" name="password" placeholder="Şifre" />
+        <input type="text" name="adress" placeholder="Adres" />
+        <input type="number" name="KKarti" placeholder="Kredi Kartı No" />
+        <button>Kayıt Ol</button>
+        <p>Hesabın var ise <a href="/login">Giriş</a></p>
+      </form>
+    </div>
+  </body>
+</html>

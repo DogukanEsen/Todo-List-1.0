@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giriş</title>
+    <link rel="stylesheet" href="/style.css" />
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- Giris animasyonu -->
+    <script>
+      $(window).on("load", function () {
+        $(".loader-wrapper").fadeOut("slow");
+      });
+    </script>
+  </head>
+  <body>
+    <!-- Giris kısmı -->
+    <section id="home">
+      <header>
+        <ul id="menu">
+          <li><a href="#home"> Hoş Geldiniz </a></li>
+          <li><a href="#about"> Giriş Sayfası </a></li>
+          <li><a href="#product">Biz kimiz</a></li>
+        </ul>
+      </header>
+      <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+      </div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <h2 style="text-align: center">Hoş Geldiniz</h2>
+      <label
+        >Sayfamız bir ToDo uygulamasıdır. Sağ taraftaki resimde görüldüğü gibi
+        bir <br />
+        arayüze sahiptir. Projemizde Kullanıcılar kendilerine özel ToDo <br />
+        oluşturabilir ve silebilir.
+      </label>
+      <img src="uygulamaGoruntusu.jpeg" alt="" width="700px" height="500px" />
+    </section>
+    <!-- login kısmı -->
+    <section id="about">
+      <h1>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div class="main">
+          <h1>HESABINIZA GİRİŞ YAPINIZ</h1>
+          <% if (messages) { %>
+          <p><%= messages.error %></p>
+          <% } %>
+          <form action="/login" method="POST" class="center">
+            <input type="email" name="email" placeholder="Örnek@gmail.com" />
+            <input type="password" name="password" placeholder="Şifre" />
+            <button>GİRİŞ</button>
+            <p>
+              HESABIN YOK MU? KAYIT OLMAYI DENE.
+              <a href="/register"><BR /><BR />KAYIT</a>
+            </p>
+          </form>
+        </div>
+      </h1>
+    </section>
+    <!-- Biz kimiz kısmı -->
+    <section id="product">
+      <h1>Biz Kimiz?</h1>
+      <div class="isim">
+        <br> <br> <br><br><br><br><br> <br>
+        <h2>Abdülkadir KAMÇI - 200601060</h2> <br/><br/><br/>
+        <h2>Satı Doğukan ESEN - 200601069</h2>
+        <a href="https://github.com/DogukanEsen"><img src="github.png" width="50px" height="50px"></a>
+        <a href="https://www.linkedin.com/in/dogukan-esen/"><img src="linkedin.jpg" width="50px" height="50px"></a>
+      </div>
+    </section>
+  </body>
+</html>
