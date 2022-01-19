@@ -191,7 +191,7 @@ app.get("*", (req, res) => {
 
 // mongodb connection and listening for connections on PORT: 3000
 mongoose
-  .connect("mongodb+srv://dogukan:dogukan1@cluster0.ga8mi.mongodb.net/myFirstDatabase?retryWrites=true&w=majority/authtodo", {
+  .connect("mongodb+srv://dogukan:dogukan1@cluster0.ga8mi.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
     useUnifiedTopology: true,
     useNewUrlParser: true,
   })
