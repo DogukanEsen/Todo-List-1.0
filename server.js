@@ -13,7 +13,7 @@ const Item = require("./models/Item");
 const inf = require("./models/Information");
 const Kredi = require("./models/KrediKartı");
 const sToDo = require("./models/SilinenToDo");
-const port = process.env.port || 5000
+const port = process.env.PORT || 5000
 
 const {
   checkAuthenticated,
@@ -197,6 +197,6 @@ mongoose
   })
   .then(() => {
     app.listen(port, () => {
-      console.log("Server is running on Port 5000");
+      console.log("Server is running on Port ${port}");
     });
   });
